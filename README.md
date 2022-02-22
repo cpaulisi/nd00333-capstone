@@ -17,7 +17,7 @@ The task is to develop a model that can serve as a binary classifier. It must be
 
 ### Access
 The data is accessed via the Azure workspace, using the Workspace and Dataset modules from the SDK. The Workspace is instantiated from a config.json file. Preprocessing is done via temporarily transforming the dataset into a pandas DataFrame.
-```
+```python
 def preprocess(data):
     y_df = data.pop("quality").apply(lambda x: 1 if x == "good" else 0)
     return data, y_df
