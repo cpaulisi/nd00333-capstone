@@ -1,5 +1,4 @@
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fred-wine&psig=AOvVaw1ZIuIv1Z0C37t1E-DKWfP5&ust=1645580246868000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCfwaSWkvYCFQAAAAAdAAAAABAD
-
+![wine](https://media.istockphoto.com/photos/wine-pouring-into-glass-picture-id615269202?k=20&m=615269202&s=612x612&w=0&h=S2tAKM7s1kTrJtVKrxmzHNldA_-LRwSgUXirGM_ik20=)
 # Prediction of Wine Quality
 
 This project seeks to create a model for classifying wine as either "good" or "bad". A canonical ranking of 5 or below signifies a "bad" wine, while a rating of greater than 5 is considered a target for "good" wine. By using the AutoML and Hyperparameter tuning features within the Azure SDK, a model is generated and deployed for consumption.
