@@ -1,4 +1,4 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fred-wine&psig=AOvVaw1ZIuIv1Z0C37t1E-DKWfP5&ust=1645580246868000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCfwaSWkvYCFQAAAAAdAAAAABAD
 
 # Prediction of Wine Quality
 
