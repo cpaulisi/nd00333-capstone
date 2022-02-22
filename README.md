@@ -30,7 +30,7 @@ x['y'] = y
 ```
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+Within AutoML the experiment was set to time out in 20 minutes, the maximum number of compute nodes was set to 3, contingent upon the compute cluster having 4 nodes provisioned. The primary metric for training was set to accuracy. Featurization settings were also set to automatic.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
