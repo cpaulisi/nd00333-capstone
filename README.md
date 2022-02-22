@@ -1,4 +1,4 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+<img align="right" width="200" height="150" src="https://media.istockphoto.com/photos/wine-pouring-into-glass-picture-id615269202?k=20&m=615269202&s=612x612&w=0&h=S2tAKM7s1kTrJtVKrxmzHNldA_-LRwSgUXirGM_ik20=">
 
 # Prediction of Wine Quality
 
@@ -17,7 +17,7 @@ The task is to develop a model that can serve as a binary classifier. It must be
 
 ### Access
 The data is accessed via the Azure workspace, using the Workspace and Dataset modules from the SDK. The Workspace is instantiated from a config.json file. Preprocessing is done via temporarily transforming the dataset into a pandas DataFrame.
-```
+```python
 def preprocess(data):
     y_df = data.pop("quality").apply(lambda x: 1 if x == "good" else 0)
     return data, y_df
