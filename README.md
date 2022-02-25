@@ -68,6 +68,11 @@ The registry of the model with its name is below. Also shown is the correspondin
 
 <img width="1178" alt="Screen Shot 2022-02-25 at 2 39 31 PM" src="https://user-images.githubusercontent.com/87383001/155784488-9e52a1d7-be2d-436b-87a5-482c61942a46.png">
 
+A healthy endpoint was also checked via AML UI after deployment.
+
+<img width="1237" alt="Screen Shot 2022-02-25 at 2 42 39 PM" src="https://user-images.githubusercontent.com/87383001/155784687-aa397fbc-ff64-424b-93c9-a8bdd5be69d1.png">
+
+
 ## Hyperparameter Tuning
 A Logistic regression was chosen for this experiment. This model was selected because the task called for binary classification, and Logistic regression is apt for this use case. The hyperparameters chosen for training included C, to prevent overfitting, and max iterations to make sure that the regression fit converges. C was randomly sampled from a uniform distribution bounded by 0.005 and 1. The max iteration parameter was randomly sampled from a discrete choice distribution comprised of a set of 100, 200, 500, and 1000. The early termination policy was set to bandit, with evaluation intervals beginning after 2 runs, evaluations happening every 2 runs, and a slack factor of 0.2.
 
