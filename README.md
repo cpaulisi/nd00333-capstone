@@ -73,7 +73,7 @@ A run details widge was created for the hyperdrive run. A decscription of comple
 
 ![Screen Shot 2022-02-24 at 10 25 44 PM](https://user-images.githubusercontent.com/87383001/155648389-57333074-17e4-4417-8fac-4ee2cb7e47ab.png)
 
-Performance line plots track the development of parameter performance amongst tuned models.
+Performance line plots track the development of parameters amongst tuned models. The model is chosen according to the test parameters, in this case including overfitting mitigation and iteration matching.
 
 ![Screen Shot 2022-02-24 at 10 29 44 PM](https://user-images.githubusercontent.com/87383001/155648440-82229ebb-eba1-4e33-a162-3cd4cbbb42d7.png)
 
