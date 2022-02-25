@@ -43,7 +43,17 @@ The best model that was selected from AutoML was a Random Forest Classifier. The
 
 In terms of AutoML, improvments could have been made by changing the stopping criteria and allowing for more iterations of training runs, as this would generate a greater volume of model runs. 
 
-The pipeline details for the automatically derived model are given below.
+
+The details widget displays information relating to run performance for each of the automatically assessed models.
+
+<img width="770" alt="Screen Shot 2022-02-25 at 3 34 59 PM" src="https://user-images.githubusercontent.com/87383001/155799270-d46b5bdf-408b-4dcf-b733-534cecb98f7d.png">
+
+A scatte plot of performance developement is also dispayed as well.
+
+<img width="1021" alt="Screen Shot 2022-02-25 at 1 41 50 PM" src="https://user-images.githubusercontent.com/87383001/155783881-9b7f0378-1f6d-4b35-aae0-a1e8b463f3a6.png">
+
+
+The pipeline details for the automatically derived model are given below. A full explanation of the pipeline parameters for the selected model are shown below. The model undergoes numerous pipeline filter steps regarding feature selection.
 
 ```python
 Pipeline(memory=None,
@@ -52,34 +62,41 @@ Pipeline(memory=None,
 ), random_state=None, reg_alpha=0.5789473684210527, reg_lambda=0.42105263157894735, subsample=1))], verbose=False)), ('11', Pipeline(memory=None, steps=[('minmaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('randomforestclassifier', RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced', criterion='gini', max_depth=None, max_features='sqrt', max_leaf_nodes=None, max_samples=None, min_impurity_decrease=0.0, min_impurity_split=None, min_samples_leaf=0.01, min_samples_split=0.33789473684210525, min_weight_fraction_leaf=0.0, n_estimators=200, n_jobs=1, oob_score=False, random_state=None, verbose=0, warm_start=False))], verbose=False))], flatten_transform=None, weights=[0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285]))],
          verbose=False)
 ```
-
-The details widget displays information relating to run performance for each of the automatically assessed models.
-
-![Screen Shot 2022-02-24 at 9 42 52 PM](https://user-images.githubusercontent.com/87383001/155643986-25906b5f-9175-4a03-a96e-0d95afa5483a.png)
-
-A full explanation of the pipeline parameters for the selected model are shown below. The model undergoes numerous pipeline filter steps regarding feature selection.
-
 <img width="1049" alt="Screen Shot 2022-02-21 at 8 59 36 PM" src="https://user-images.githubusercontent.com/87383001/155050482-e67f53f9-94cc-4512-a448-044cf7ee28c7.png">
+
+The registry of the model with its name is below. Also shown is the corresponding run ID.
+
+<img width="1178" alt="Screen Shot 2022-02-25 at 2 39 31 PM" src="https://user-images.githubusercontent.com/87383001/155784488-9e52a1d7-be2d-436b-87a5-482c61942a46.png">
+
+A healthy endpoint was also checked via AML UI after deployment.
+
+<img width="1237" alt="Screen Shot 2022-02-25 at 2 42 39 PM" src="https://user-images.githubusercontent.com/87383001/155784687-aa397fbc-ff64-424b-93c9-a8bdd5be69d1.png">
 
 
 ## Hyperparameter Tuning
 A Logistic regression was chosen for this experiment. This model was selected because the task called for binary classification, and Logistic regression is apt for this use case. The hyperparameters chosen for training included C, to prevent overfitting, and max iterations to make sure that the regression fit converges. C was randomly sampled from a uniform distribution bounded by 0.005 and 1. The max iteration parameter was randomly sampled from a discrete choice distribution comprised of a set of 100, 200, 500, and 1000. The early termination policy was set to bandit, with evaluation intervals beginning after 2 runs, evaluations happening every 2 runs, and a slack factor of 0.2.
 
+The **train.py** script is created in-cell in the notebook.
+
 
 ### Results
-The model that was generated from hyperdrive achieved a maximum of 0.725 accuracy. The optimal parameters were C = 0.814 and max_iter = 500. The model could be improved in the future by altering the bandit policy to allow for a more extensive set of runs. A larger set of parameters to choose from could also allow for better results.
+The model that was generated from hyperdrive achieved a maximum of 0.728 accuracy. The optimal parameters were C = 0.747 and max_iter = 1000. The model could be improved in the future by altering the bandit policy to allow for a more extensive set of runs. A larger set of parameters to choose from could also allow for better results.
 
 A run details widge was created for the hyperdrive run. A decscription of completion status, along with metrics, was generated for every run.
 
-![Screen Shot 2022-02-24 at 10 25 44 PM](https://user-images.githubusercontent.com/87383001/155648389-57333074-17e4-4417-8fac-4ee2cb7e47ab.png)
+<img width="1099" alt="Screen Shot 2022-02-25 at 3 17 57 PM" src="https://user-images.githubusercontent.com/87383001/155795382-73330dfe-c9e5-4d53-8fa5-3d1cf8df02fd.png">
 
 Performance line plots track the development of parameters amongst tuned models. The model is chosen according to the test parameters, in this case including overfitting mitigation and iteration matching.
 
-![Screen Shot 2022-02-24 at 10 29 44 PM](https://user-images.githubusercontent.com/87383001/155648440-82229ebb-eba1-4e33-a162-3cd4cbbb42d7.png)
+<img width="1053" alt="Screen Shot 2022-02-25 at 3 18 05 PM" src="https://user-images.githubusercontent.com/87383001/155795135-43af3ab6-b630-48d0-bf61-d190ce069a57.png">
+
+The accuracy shifts on a scatter plot are also shown below.
+
+<img width="1038" alt="Screen Shot 2022-02-25 at 3 18 13 PM" src="https://user-images.githubusercontent.com/87383001/155794744-4af9b2a6-98c7-423a-a539-644558c9ae5d.png">
 
 The parameters for the best-performing model are diplayed below. These parameters were iteratively assessed using a bandit policy.
 
-![Screen Shot 2022-02-24 at 10 25 55 PM](https://user-images.githubusercontent.com/87383001/155648408-c694282d-976d-45fd-8d17-229802156453.png)
+<img width="1105" alt="Screen Shot 2022-02-25 at 3 18 23 PM" src="https://user-images.githubusercontent.com/87383001/155795565-a3a8e620-8e77-4280-b8fc-5ea990b3cc06.png">
 
 
 
