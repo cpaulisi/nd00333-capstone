@@ -62,9 +62,11 @@ Pipeline(memory=None,
 ), random_state=None, reg_alpha=0.5789473684210527, reg_lambda=0.42105263157894735, subsample=1))], verbose=False)), ('11', Pipeline(memory=None, steps=[('minmaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('randomforestclassifier', RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced', criterion='gini', max_depth=None, max_features='sqrt', max_leaf_nodes=None, max_samples=None, min_impurity_decrease=0.0, min_impurity_split=None, min_samples_leaf=0.01, min_samples_split=0.33789473684210525, min_weight_fraction_leaf=0.0, n_estimators=200, n_jobs=1, oob_score=False, random_state=None, verbose=0, warm_start=False))], verbose=False))], flatten_transform=None, weights=[0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285]))],
          verbose=False)
 ```
-
 <img width="1049" alt="Screen Shot 2022-02-21 at 8 59 36 PM" src="https://user-images.githubusercontent.com/87383001/155050482-e67f53f9-94cc-4512-a448-044cf7ee28c7.png">
 
+The registry of the model with its name is below. Also shown is the corresponding run ID.
+
+<img width="1178" alt="Screen Shot 2022-02-25 at 2 39 31 PM" src="https://user-images.githubusercontent.com/87383001/155784488-9e52a1d7-be2d-436b-87a5-482c61942a46.png">
 
 ## Hyperparameter Tuning
 A Logistic regression was chosen for this experiment. This model was selected because the task called for binary classification, and Logistic regression is apt for this use case. The hyperparameters chosen for training included C, to prevent overfitting, and max iterations to make sure that the regression fit converges. C was randomly sampled from a uniform distribution bounded by 0.005 and 1. The max iteration parameter was randomly sampled from a discrete choice distribution comprised of a set of 100, 200, 500, and 1000. The early termination policy was set to bandit, with evaluation intervals beginning after 2 runs, evaluations happening every 2 runs, and a slack factor of 0.2.
@@ -84,7 +86,6 @@ Performance line plots track the development of parameters amongst tuned models.
 The parameters for the best-performing model are diplayed below. These parameters were iteratively assessed using a bandit policy.
 
 ![Screen Shot 2022-02-24 at 10 25 55 PM](https://user-images.githubusercontent.com/87383001/155648408-c694282d-976d-45fd-8d17-229802156453.png)
-
 
 
 ## Model Deployment
