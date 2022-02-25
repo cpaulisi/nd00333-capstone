@@ -54,7 +54,10 @@ Pipeline(memory=None,
 ```
 
 The details widget displays information relating to run performance for each of the automatically assessed models.
+
 ![Screen Shot 2022-02-24 at 9 42 52 PM](https://user-images.githubusercontent.com/87383001/155643986-25906b5f-9175-4a03-a96e-0d95afa5483a.png)
+
+A full explanation of the pipeline parameters for the selected model are shown below. The model undergoes numerous pipeline filter steps regarding feature selection.
 
 <img width="1049" alt="Screen Shot 2022-02-21 at 8 59 36 PM" src="https://user-images.githubusercontent.com/87383001/155050482-e67f53f9-94cc-4512-a448-044cf7ee28c7.png">
 
