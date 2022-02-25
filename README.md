@@ -43,7 +43,7 @@ The best model that was selected from AutoML was a Random Forest Classifier. The
 
 In terms of AutoML, improvments could have been made by changing the stopping criteria and allowing for more iterations of training runs, as this would generate a greater volume of model runs. 
 
-```
+```python
 Pipeline(memory=None,
          steps=[('datatransformer',
                  DataTransformer(enable_dnn=False, enable_feature_sweeping=True, feature_sweeping_config={}, feature_sweeping_timeout=86400, featurization_config=None, force_text_dnn=False, is_cross_validation=True, is_onnx_compatible=False, observer=None, task='classification', working_dir='/mnt/batch/tasks/shared/LS_root/mount...
@@ -63,8 +63,13 @@ A Logistic regression was chosen for this experiment. This model was selected be
 ### Results
 The model that was generated from hyperdrive achieved a maximum of 0.725 accuracy. The optimal parameters were C = 0.814 and max_iter = 500. The model could be improved in the future by altering the bandit policy to allow for a more extensive set of runs. A larger set of parameters to choose from could also allow for better results.
 
+A run details widge was created for the hyperdrive run. A decscription of completion status, along with metrics, was generated for every run.
 ![Screen Shot 2022-02-24 at 10 25 44 PM](https://user-images.githubusercontent.com/87383001/155648389-57333074-17e4-4417-8fac-4ee2cb7e47ab.png)
+
+Performance line plots track the development of parameter performnance amongst tuned models.
 ![Screen Shot 2022-02-24 at 10 29 44 PM](https://user-images.githubusercontent.com/87383001/155648440-82229ebb-eba1-4e33-a162-3cd4cbbb42d7.png)
+
+The parameters for the best-performing model are diplayed below. These parameters were iteratively assess using a bandit policy.
 ![Screen Shot 2022-02-24 at 10 25 55 PM](https://user-images.githubusercontent.com/87383001/155648408-c694282d-976d-45fd-8d17-229802156453.png)
 
 
