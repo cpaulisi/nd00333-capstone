@@ -76,6 +76,8 @@ A healthy endpoint was also checked via AML UI after deployment.
 ## Hyperparameter Tuning
 A Logistic regression was chosen for this experiment. This model was selected because the task called for binary classification, and Logistic regression is apt for this use case. The hyperparameters chosen for training included C, to prevent overfitting, and max iterations to make sure that the regression fit converges. C was randomly sampled from a uniform distribution bounded by 0.005 and 1. The max iteration parameter was randomly sampled from a discrete choice distribution comprised of a set of 100, 200, 500, and 1000. The early termination policy was set to bandit, with evaluation intervals beginning after 2 runs, evaluations happening every 2 runs, and a slack factor of 0.2.
 
+The **train.py** script is created in-cell in the notebook.
+
 
 ### Results
 The model that was generated from hyperdrive achieved a maximum of 0.728 accuracy. The optimal parameters were C = 0.747 and max_iter = 1000. The model could be improved in the future by altering the bandit policy to allow for a more extensive set of runs. A larger set of parameters to choose from could also allow for better results.
