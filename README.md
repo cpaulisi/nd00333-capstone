@@ -62,7 +62,7 @@ A Logistic regression was chosen for this experiment. This model was selected be
 
 
 ### Results
-The model that was generated from hyperdrive achieved a maximum of 0.725 accuracy. The optimal parameters were C = 0.814 and max_iter = 500. The model could be improved in the future by altering the bandit policy to allow for a more extensive set of runs. 
+The model that was generated from hyperdrive achieved a maximum of 0.725 accuracy. The optimal parameters were C = 0.814 and max_iter = 500. The model could be improved in the future by altering the bandit policy to allow for a more extensive set of runs. A larger set of parameters to choose from could also allow for better results.
 
 ![Screen Shot 2022-02-24 at 10 25 44 PM](https://user-images.githubusercontent.com/87383001/155648389-57333074-17e4-4417-8fac-4ee2cb7e47ab.png)
 ![Screen Shot 2022-02-24 at 10 29 44 PM](https://user-images.githubusercontent.com/87383001/155648440-82229ebb-eba1-4e33-a162-3cd4cbbb42d7.png)
