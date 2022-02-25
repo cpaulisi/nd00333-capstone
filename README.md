@@ -46,7 +46,7 @@ In terms of AutoML, improvments could have been made by changing the stopping cr
 
 The details widget displays information relating to run performance for each of the automatically assessed models.
 
-<img width="1095" alt="Screen Shot 2022-02-25 at 1 41 39 PM" src="https://user-images.githubusercontent.com/87383001/155783866-c5f8f02d-0931-4cc0-af72-9d6560147175.png">
+<img width="770" alt="Screen Shot 2022-02-25 at 3 34 59 PM" src="https://user-images.githubusercontent.com/87383001/155799270-d46b5bdf-408b-4dcf-b733-534cecb98f7d.png">
 
 A scatte plot of performance developement is also dispayed as well.
 
