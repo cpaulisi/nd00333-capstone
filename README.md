@@ -52,7 +52,7 @@ Pipeline(memory=None,
          verbose=False)
 ```
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![Screen Shot 2022-02-24 at 9 42 52 PM](https://user-images.githubusercontent.com/87383001/155643986-25906b5f-9175-4a03-a96e-0d95afa5483a.png)
 
 <img width="1049" alt="Screen Shot 2022-02-21 at 8 59 36 PM" src="https://user-images.githubusercontent.com/87383001/155050482-e67f53f9-94cc-4512-a448-044cf7ee28c7.png">
 
