@@ -5,7 +5,6 @@
 This project seeks to create a model for classifying wine as either "good" or "bad". A canonical ranking of 5 or below signifies a "bad" wine, while a rating of greater than 5 is considered a target for "good" wine. By using the AutoML and Hyperparameter tuning features within the Azure SDK, a model is generated and deployed for consumption.
 
 ## Project Set Up and Installation
-The wine.csv file, located in the wine.zip file, must be uploaded into the Azure account blob storage and name "Wine".
 The entry script (echo_score.py) must be uploaded to the cloud along with the notebooks.
 After the AutoML model is deployed, authorization is enabled and the respective API key for the webservice but be assigned to the "api_key" variable in the AutoML notebook like below:
 ```python
