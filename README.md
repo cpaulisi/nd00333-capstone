@@ -82,15 +82,20 @@ The model that was generated from hyperdrive achieved a maximum of 0.725 accurac
 
 A run details widge was created for the hyperdrive run. A decscription of completion status, along with metrics, was generated for every run.
 
-![Screen Shot 2022-02-24 at 10 25 44 PM](https://user-images.githubusercontent.com/87383001/155648389-57333074-17e4-4417-8fac-4ee2cb7e47ab.png)
+<img width="1099" alt="Screen Shot 2022-02-25 at 3 17 57 PM" src="https://user-images.githubusercontent.com/87383001/155795382-73330dfe-c9e5-4d53-8fa5-3d1cf8df02fd.png">
 
 Performance line plots track the development of parameters amongst tuned models. The model is chosen according to the test parameters, in this case including overfitting mitigation and iteration matching.
 
-![Screen Shot 2022-02-24 at 10 29 44 PM](https://user-images.githubusercontent.com/87383001/155648440-82229ebb-eba1-4e33-a162-3cd4cbbb42d7.png)
+<img width="1053" alt="Screen Shot 2022-02-25 at 3 18 05 PM" src="https://user-images.githubusercontent.com/87383001/155795135-43af3ab6-b630-48d0-bf61-d190ce069a57.png">
+
+The accuracy shifts on a scatter plot are also shown below.
+
+<img width="1038" alt="Screen Shot 2022-02-25 at 3 18 13 PM" src="https://user-images.githubusercontent.com/87383001/155794744-4af9b2a6-98c7-423a-a539-644558c9ae5d.png">
 
 The parameters for the best-performing model are diplayed below. These parameters were iteratively assessed using a bandit policy.
 
-![Screen Shot 2022-02-24 at 10 25 55 PM](https://user-images.githubusercontent.com/87383001/155648408-c694282d-976d-45fd-8d17-229802156453.png)
+<img width="1105" alt="Screen Shot 2022-02-25 at 3 18 23 PM" src="https://user-images.githubusercontent.com/87383001/155795565-a3a8e620-8e77-4280-b8fc-5ea990b3cc06.png">
+
 
 
 ## Model Deployment
