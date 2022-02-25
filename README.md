@@ -43,7 +43,17 @@ The best model that was selected from AutoML was a Random Forest Classifier. The
 
 In terms of AutoML, improvments could have been made by changing the stopping criteria and allowing for more iterations of training runs, as this would generate a greater volume of model runs. 
 
-The pipeline details for the automatically derived model are given below.
+
+The details widget displays information relating to run performance for each of the automatically assessed models.
+
+<img width="1095" alt="Screen Shot 2022-02-25 at 1 41 39 PM" src="https://user-images.githubusercontent.com/87383001/155783866-c5f8f02d-0931-4cc0-af72-9d6560147175.png">
+
+A scatte plot of performance developement is also dispayed as well.
+
+<img width="1021" alt="Screen Shot 2022-02-25 at 1 41 50 PM" src="https://user-images.githubusercontent.com/87383001/155783881-9b7f0378-1f6d-4b35-aae0-a1e8b463f3a6.png">
+
+
+The pipeline details for the automatically derived model are given below. A full explanation of the pipeline parameters for the selected model are shown below. The model undergoes numerous pipeline filter steps regarding feature selection.
 
 ```python
 Pipeline(memory=None,
@@ -52,12 +62,6 @@ Pipeline(memory=None,
 ), random_state=None, reg_alpha=0.5789473684210527, reg_lambda=0.42105263157894735, subsample=1))], verbose=False)), ('11', Pipeline(memory=None, steps=[('minmaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('randomforestclassifier', RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced', criterion='gini', max_depth=None, max_features='sqrt', max_leaf_nodes=None, max_samples=None, min_impurity_decrease=0.0, min_impurity_split=None, min_samples_leaf=0.01, min_samples_split=0.33789473684210525, min_weight_fraction_leaf=0.0, n_estimators=200, n_jobs=1, oob_score=False, random_state=None, verbose=0, warm_start=False))], verbose=False))], flatten_transform=None, weights=[0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285, 0.14285714285714285]))],
          verbose=False)
 ```
-
-The details widget displays information relating to run performance for each of the automatically assessed models.
-
-![Screen Shot 2022-02-24 at 9 42 52 PM](https://user-images.githubusercontent.com/87383001/155643986-25906b5f-9175-4a03-a96e-0d95afa5483a.png)
-
-A full explanation of the pipeline parameters for the selected model are shown below. The model undergoes numerous pipeline filter steps regarding feature selection.
 
 <img width="1049" alt="Screen Shot 2022-02-21 at 8 59 36 PM" src="https://user-images.githubusercontent.com/87383001/155050482-e67f53f9-94cc-4512-a448-044cf7ee28c7.png">
 
