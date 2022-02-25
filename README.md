@@ -43,6 +43,8 @@ The best model that was selected from AutoML was a Random Forest Classifier. The
 
 In terms of AutoML, improvments could have been made by changing the stopping criteria and allowing for more iterations of training runs, as this would generate a greater volume of model runs. 
 
+The pipeline details for the automatically derived model are given below.
+
 ```python
 Pipeline(memory=None,
          steps=[('datatransformer',
@@ -51,6 +53,7 @@ Pipeline(memory=None,
          verbose=False)
 ```
 
+The details widget displays information relating to run performance for each of the automatically assessed models.
 ![Screen Shot 2022-02-24 at 9 42 52 PM](https://user-images.githubusercontent.com/87383001/155643986-25906b5f-9175-4a03-a96e-0d95afa5483a.png)
 
 <img width="1049" alt="Screen Shot 2022-02-21 at 8 59 36 PM" src="https://user-images.githubusercontent.com/87383001/155050482-e67f53f9-94cc-4512-a448-044cf7ee28c7.png">
@@ -71,7 +74,7 @@ Performance line plots track the development of parameter performance amongst tu
 
 ![Screen Shot 2022-02-24 at 10 29 44 PM](https://user-images.githubusercontent.com/87383001/155648440-82229ebb-eba1-4e33-a162-3cd4cbbb42d7.png)
 
-The parameters for the best-performing model are diplayed below. These parameters were iteratively assess using a bandit policy.
+The parameters for the best-performing model are diplayed below. These parameters were iteratively assessed using a bandit policy.
 
 ![Screen Shot 2022-02-24 at 10 25 55 PM](https://user-images.githubusercontent.com/87383001/155648408-c694282d-976d-45fd-8d17-229802156453.png)
 
